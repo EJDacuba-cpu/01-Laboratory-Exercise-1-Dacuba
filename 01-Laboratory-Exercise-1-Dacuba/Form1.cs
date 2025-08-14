@@ -16,5 +16,10 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
