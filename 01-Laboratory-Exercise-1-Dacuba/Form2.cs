@@ -27,7 +27,15 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             label5.Text = StudentInfoClass.ContNum.ToString();
             label6.Text = StudentInfoClass.StuNum.ToString();
             label7.Text = StudentInfoClass.Age.ToString();
+            label8.Text = StudentInfoClass.Program.ToString();
+ 
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

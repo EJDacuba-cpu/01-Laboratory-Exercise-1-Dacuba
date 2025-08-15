@@ -14,9 +14,9 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         public delegate long 
             DelegateNUmber(long  value);
 
-        public static string Fname, Lname, Mname, Address, Program;
+        public static string Fname, Lname, Mname, Address;
         public static long Age, ContNum, StuNum;
-        
+        public static string Program {  get; set; }
 
         public static string
             GetFirstName(string Fname)
