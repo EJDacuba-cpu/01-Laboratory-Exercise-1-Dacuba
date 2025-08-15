@@ -33,6 +33,9 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             StudentInfoClass.StuNum = long.Parse(textBox2.Text);
             StudentInfoClass.ContNum = long.Parse(textBox7.Text);
             StudentInfoClass.Age = long.Parse(textBox5.Text);
+
+            Form2 ConfirmForm =  new Form2();
+            ConfirmForm.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
