@@ -21,5 +21,28 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //set ng static variables 
+            StudentInfoClass.Fname = textBox1.Text;
+            StudentInfoClass.Mname = textBox4.Text;
+            StudentInfoClass.Lname = textBox3.Text;
+            StudentInfoClass.Address = textBox6.Text;
+            StudentInfoClass.Program = comboBox1.Text;
+            StudentInfoClass.StuNum = long.Parse(textBox2.Text);
+            StudentInfoClass.ContNum = long.Parse(textBox7.Text);
+            StudentInfoClass.Age = long.Parse(textBox5.Text);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
