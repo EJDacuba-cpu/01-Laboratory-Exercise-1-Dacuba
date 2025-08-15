@@ -16,7 +16,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             Fname, Lname, Mname, Address,Program;
         public static long Age, ContNum, StuNum;
 
-
+        //return type method
         public static string
             GetFirstName(string Fname)
         {  return Fname; }

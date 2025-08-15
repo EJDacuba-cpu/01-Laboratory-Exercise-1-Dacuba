@@ -41,16 +41,15 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         private void Form2_Load(object sender, EventArgs e)
         {
             // call Delegates to pass static table values
-            label1.Text = StudentInfoClass.Fname;
-            label2.Text = StudentInfoClass.Mname;
-            label3.Text = StudentInfoClass.Lname;
-            label4.Text = StudentInfoClass.Address;
-            label5.Text = StudentInfoClass.ContNum.ToString();
-            label6.Text = StudentInfoClass.StuNum.ToString();
-            label7.Text = StudentInfoClass.Age.ToString();
-            label8.Text = StudentInfoClass.Program.ToString();
+            label1.Text = DelFirstName(StudentInfoClass.Fname); 
+            label2.Text = DelMiddleName(StudentInfoClass.Mname);
+            label3.Text = DelLastName(StudentInfoClass.Lname);
+            label4.Text = DelAddress(StudentInfoClass.Address);
+            label5.Text = DelContactnum(StudentInfoClass.ContNum).ToString();
+            label6.Text = DelStudentnum(StudentInfoClass.StuNum).ToString();
+            label7.Text = DelAge(StudentInfoClass.Age).ToString();
+            label8.Text = DelProgram(StudentInfoClass.Program).ToString();
  
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,6 +59,11 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }

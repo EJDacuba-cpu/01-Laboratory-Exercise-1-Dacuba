@@ -33,6 +33,34 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("lagay mo naman First name mo nak nang teteng ohh!!");
+                textBox1.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("lagay mo naman Middle name mo nak nang teteng ohh!!");
+                textBox1.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox4.Text))
+            {
+                MessageBox.Show("lagay mo naman last name mo nak nang teteng ohh!!");
+                textBox1.Focus();
+                return;
+
+            }
+
+            if (string.IsNullOrEmpty(textBox6.Text))
+            {
+                MessageBox.Show("lagay mo naman address name mo nak nang teteng ohh!!");
+                textBox1.Focus();
+                return;
+            }
+
+
             // para dun sa mga numeric 
             if (!long.TryParse(textBox2.Text, out var StuNum))
             {
@@ -57,7 +85,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
 
 
-            //set ng values
+            //set static values
             StudentInfoClass.StuNum = StuNum;
             StudentInfoClass.Program = comboBox1.Text;
             StudentInfoClass.Fname = textBox1.Text.Trim();
