@@ -30,76 +30,37 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox4.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox3.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox6.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox2.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox7.Text)
+                ||
+                string.IsNullOrWhiteSpace(textBox5.Text)
+                ||
+                comboBox1.SelectedItem == null)
             {
-                MessageBox.Show("Please Enter Your First name");
+                MessageBox.Show("Yan tayo eh submit agad??");
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox4.Text))
-            {
-                MessageBox.Show("Please Enter Your Middle Name");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                MessageBox.Show("Please Enter Your Last Name");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox6.Text))
-            {
-                MessageBox.Show("Please Enter your Address");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                MessageBox.Show("Please Enter your Student Number");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox7.Text))
-            {
-                MessageBox.Show("Please Enter your Contact Number");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(textBox5.Text))
-            {
-                MessageBox.Show("Please Enter your Age");
-                return;
-            }
-
-            if (comboBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Ah di mo alam Program mo?");
-                return;
-
-                
-
-
-
-            }
             // para dun sa mga numeric 
-            if (!long.TryParse(textBox2.Text, out StudentInfoClass.StuNum))
+            if (!long.TryParse(textBox2.Text, out StudentInfoClass.StuNum) 
+                ||
+                !long.TryParse(textBox7.Text, out StudentInfoClass.ContNum)
+                ||
+                !long.TryParse(textBox5.Text, out StudentInfoClass.Age))
             {
-                MessageBox.Show("invalid Student Number");
+                MessageBox.Show("NUYAN GAGAWIN? SUNTUKAN?"); 
                 return;
             }
 
-            if (!long.TryParse(textBox7.Text, out StudentInfoClass.ContNum))
-            {
-                MessageBox.Show("invalid Contact Number");
-                return;
-            }
-
-            if (!long.TryParse(textBox5.Text, out StudentInfoClass.Age))
-            {
-                MessageBox.Show("invalid Age");
-                return;
-            }
 
             //set ng values
             StudentInfoClass.Fname = textBox1.Text;
