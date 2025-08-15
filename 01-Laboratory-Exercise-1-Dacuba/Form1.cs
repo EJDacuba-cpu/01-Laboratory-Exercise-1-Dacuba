@@ -30,23 +30,64 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //set ng static variables 
+            //set ng values
             StudentInfoClass.Fname = textBox1.Text;
             StudentInfoClass.Mname = textBox4.Text;
             StudentInfoClass.Lname = textBox3.Text;
             StudentInfoClass.Address = textBox6.Text;
+            StudentInfoClass.Program = comboBox1.SelectedItem.ToString();
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("lagay mo naman first name mo bossing");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("lagay mo naman first name mo bossing");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("lagay mo naman first name mo bossing");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("lagay mo naman first name mo bossing");
+                return;
+            }
+
+
+
+
+
+            // para dun sa mga numeric 
             if (!long.TryParse(textBox2.Text, out StudentInfoClass.StuNum))
             {
                 MessageBox.Show("invalid");
                 return;
             }
-            StudentInfoClass.ContNum = long.Parse(textBox7.Text);
-            StudentInfoClass.Age = long.Parse(textBox5.Text);
 
-            if (comboBox1.SelectedItem != null)
+            if (!long.TryParse(textBox7.Text, out StudentInfoClass.ContNum))
             {
-                StudentInfoClass.Program = comboBox1.SelectedItem.ToString();
+                MessageBox.Show("invalid");
+                return;
             }
+
+            if (!long.TryParse(textBox5.Text, out StudentInfoClass.Age))
+            {
+                MessageBox.Show("invalid");
+                return;
+            }
+   
+            
+
+
+
             // kung approve ba kay form 1 para maka tuloy ka kay form 2
             Form2 form = new Form2();
             if (form.ShowDialog() == DialogResult.OK)
