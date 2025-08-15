@@ -168,9 +168,11 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(161, 20);
             this.textBox7.TabIndex = 15;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(273, 183);
             this.comboBox1.Name = "comboBox1";
@@ -208,6 +210,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 20);
             this.textBox2.TabIndex = 22;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // imageList1
             // 
@@ -221,10 +224,11 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(161, 20);
             this.textBox5.TabIndex = 23;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Location = new System.Drawing.Point(51, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(414, 482);

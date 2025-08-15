@@ -12,11 +12,11 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         public delegate string
             DelegateText(string value);
         public delegate long 
-            DelegateNUmber(long  value);
+            DelegateNUmber(long value);
 
         public static string Fname, Lname, Mname, Address;
         public static long Age, ContNum, StuNum;
-        public static string Program {  get; set; }
+        public static string Program { get; set; }
 
         public static string
             GetFirstName(string Fname)
@@ -33,10 +33,6 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         public static string
             GetAddress(string Address)
         { return Address; }
-
-        public static string
-            GetProgram(string Program) 
-        { return Program; }
 
         public static long
             GetAge(long Age) 

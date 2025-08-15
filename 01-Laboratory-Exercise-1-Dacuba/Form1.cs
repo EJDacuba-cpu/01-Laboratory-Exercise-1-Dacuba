@@ -19,7 +19,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // ARRAY NG PROGRAM
+            // list Ng Course
             comboBox1.Items.Add("BSIT");
             comboBox1.Items.Add("BSCS");
             comboBox1.Items.Add("BSEDUC");
@@ -35,7 +35,11 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             StudentInfoClass.Mname = textBox4.Text;
             StudentInfoClass.Lname = textBox3.Text;
             StudentInfoClass.Address = textBox6.Text;
-            StudentInfoClass.StuNum = long.Parse(textBox2.Text);
+            if (!long.TryParse(textBox2.Text, out StudentInfoClass.StuNum))
+            {
+                MessageBox.Show("invalid");
+                return;
+            }
             StudentInfoClass.ContNum = long.Parse(textBox7.Text);
             StudentInfoClass.Age = long.Parse(textBox5.Text);
 
@@ -43,9 +47,6 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             {
                 StudentInfoClass.Program = comboBox1.SelectedItem.ToString();
             }
-
- 
-
             // kung approve ba kay form 1 para maka tuloy ka kay form 2
             Form2 form = new Form2();
             if (form.ShowDialog() == DialogResult.OK)
@@ -53,7 +54,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
                 MessageBox.Show(" Submitted na boooooyy!!!!");
 
             }
-        }
+        }    
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -71,6 +72,21 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
