@@ -15,69 +15,78 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         public Form1()
         {
             InitializeComponent();
+            comboBox1.Items.AddRange(new
+                object[]
+            {
+                "BS in Computer Science",
+                "BS in Information Technology",
+                "BS information System",
+                "BS in Computer Engineering"
+            });
+            if (comboBox1.Items.Count > 0) comboBox1.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // list Ng Course
-            comboBox1.Items.Add("BSIT");
-            comboBox1.Items.Add("BSCS");
-            comboBox1.Items.Add("BSEDUC");
-            comboBox1.Items.Add("BS");
-            comboBox1.Items.Add("BS");
-            comboBox1.Items.Add("BBC");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox4.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox3.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox6.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox2.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox7.Text)
-                ||
-                string.IsNullOrWhiteSpace(textBox5.Text)
-                ||
-                comboBox1.SelectedItem == null)
+            // para dun sa mga numeric 
+            if (!long.TryParse(textBox2.Text, out var StuNum))
             {
-                MessageBox.Show("Please Complete all the Forms");
+                MessageBox.Show("Enter valid Student number");
+                textBox2.Focus();
                 return;
+            }
+            if (!long.TryParse(textBox7.Text, out var ContNum))
+            {
+                MessageBox.Show("Enter valid Contact Number");
+                textBox7.Focus();
+                return;
+            }
+            if (!long.TryParse(textBox5.Text, out var Age))
+            {
+                MessageBox.Show("Enter valid age");
+                textBox5.Focus();
+                return;
+
             }
 
-            // para dun sa mga numeric 
-            if (!long.TryParse(textBox2.Text, out StudentInfoClass.StuNum) 
-                ||
-                !long.TryParse(textBox7.Text, out StudentInfoClass.ContNum)
-                ||
-                !long.TryParse(textBox5.Text, out StudentInfoClass.Age))
-            {
-                MessageBox.Show("Invalid number format"); 
-                return;
-            }
+
 
 
             //set ng values
-            StudentInfoClass.Fname = textBox1.Text;
-            StudentInfoClass.Mname = textBox4.Text;
-            StudentInfoClass.Lname = textBox3.Text;
-            StudentInfoClass.Address = textBox6.Text;
-            StudentInfoClass.Program = comboBox1.SelectedItem.ToString();
+            StudentInfoClass.StuNum = StuNum;
+            StudentInfoClass.Program = comboBox1.Text;
+            StudentInfoClass.Fname = textBox1.Text.Trim();
+            StudentInfoClass.Mname = textBox4.Text.Trim();
+            StudentInfoClass.Lname = textBox3.Text.Trim();
+            StudentInfoClass.ContNum = ContNum;
+            StudentInfoClass.Address = textBox6.Text.Trim();
+            StudentInfoClass.Age = Age;
+
 
 
             // kung approve ba kay form 1 para maka tuloy ka kay form 2
-            Form2 form = new Form2();
-            if (form.ShowDialog() == DialogResult.OK)
+            using (var form = new Form2())
             {
-                MessageBox.Show(" Submitted Successfully");
 
+                var result = form.ShowDialog(this);
+                if (result == DialogResult.OK)
+                {
+                    MessageBox.Show(" Submitted Successfully");
+                    foreach (Control c in this.Controls)
+                    {
+                        if (c is TextBox tb) tb.Clear();
+                    }
+                    textBox2.Focus();
+
+                }
             }
-        }    
+        }
+                       
 
         private void label1_Click(object sender, EventArgs e)
         {

@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace _01_Laboratory_Exercise_1_Dacuba
 {
+    public delegate string DelString(string value);
+    public delegate long DelLong(long value);
     internal class StudentInfoClass
     {
-        public delegate string
-            DelegateText(string value);
-        public delegate long 
-            DelegateNUmber(long value);
-
-        public static string Fname, Lname, Mname, Address;
+        // Table Variable
+        public static string 
+            Fname, Lname, Mname, Address,Program;
         public static long Age, ContNum, StuNum;
-        public static string Program { get; set; }
+
 
         public static string
             GetFirstName(string Fname)
         {  return Fname; }
 
         public static string 
-            GetLastName(string Fname)
+            GetLastName(string Lname)
         { return Fname; }
 
         public static string
@@ -33,6 +32,10 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         public static string
             GetAddress(string Address)
         { return Address; }
+
+        public static string
+    GetProgram(string program)
+        { return program; }
 
         public static long
             GetAge(long Age) 
