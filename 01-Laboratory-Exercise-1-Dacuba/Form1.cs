@@ -46,7 +46,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
                 ||
                 comboBox1.SelectedItem == null)
             {
-                MessageBox.Show("Yan tayo eh submit agad??");
+                MessageBox.Show("Please Complete all the Forms");
                 return;
             }
 
@@ -57,7 +57,7 @@ namespace _01_Laboratory_Exercise_1_Dacuba
                 ||
                 !long.TryParse(textBox5.Text, out StudentInfoClass.Age))
             {
-                MessageBox.Show("NUYAN GAGAWIN? SUNTUKAN?"); 
+                MessageBox.Show("Invalid number format"); 
                 return;
             }
 
@@ -70,14 +70,11 @@ namespace _01_Laboratory_Exercise_1_Dacuba
             StudentInfoClass.Program = comboBox1.SelectedItem.ToString();
 
 
-
-
-
             // kung approve ba kay form 1 para maka tuloy ka kay form 2
             Form2 form = new Form2();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(" Submitted na boooooyy!!!!");
+                MessageBox.Show(" Submitted Successfully");
 
             }
         }    
