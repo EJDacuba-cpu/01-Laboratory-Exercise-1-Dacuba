@@ -16,5 +16,18 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // PARA MA DISPLAY YUNG ANO BAWAT PIECE NG INFO
+            label1.Text = StudentInfoClass.Fname;
+            label2.Text = StudentInfoClass.Mname;
+            label3.Text = StudentInfoClass.Lname;
+            label4.Text = StudentInfoClass.Address;
+            label5.Text = StudentInfoClass.ContNum.ToString();
+            label6.Text = StudentInfoClass.StuNum.ToString();
+            label7.Text = StudentInfoClass.Age.ToString();
+            
+        }
     }
 }
