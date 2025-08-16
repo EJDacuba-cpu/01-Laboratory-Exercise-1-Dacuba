@@ -33,32 +33,24 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if 
+            if
             (string.IsNullOrWhiteSpace(textBox1.Text)
-            || string.IsNullOrWhiteSpace(textBox2.Text))
-   
+            || string.IsNullOrWhiteSpace(textBox4.Text)
+            || string.IsNullOrWhiteSpace(textBox3.Text)
+            || string.IsNullOrWhiteSpace(textBox6.Text))
                 {
                 MessageBox.Show("Please Complete all fields Before Submitting", "yan tayo eh" ,MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
-            // para dun sa mga numeric 
-            if (!long.TryParse(textBox2.Text, out var StuNum))
+
+            // para dun sa number validation
+            if (!long.TryParse(textBox2.Text, out var StuNum) ||
+                !long.TryParse(textBox7.Text, out var ContNum) ||
+                !long.TryParse(textBox5.Text, out var Age))
+
             {
-                MessageBox.Show("Enter valid Student number");
-                textBox2.Focus();
-                return;
-            }
-            if (!long.TryParse(textBox7.Text, out var ContNum))
-            {
-                MessageBox.Show("Enter valid Contact Number");
-                textBox7.Focus();
-                return;
-            }
-            if (!long.TryParse(textBox5.Text, out var Age))
-            {
-                MessageBox.Show("Enter valid age");
-                textBox5.Focus();
+                MessageBox.Show("Please Enter Valid Numeric Values");
                 return;
 
             }

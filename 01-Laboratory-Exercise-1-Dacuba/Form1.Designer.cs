@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(82, 359);
+            this.label3.Location = new System.Drawing.Point(276, 359);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 3;
@@ -129,7 +129,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(276, 359);
+            this.label8.Location = new System.Drawing.Point(83, 359);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 8;
@@ -159,7 +159,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(79, 375);
+            this.textBox6.Location = new System.Drawing.Point(273, 375);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(161, 20);
             this.textBox6.TabIndex = 14;
@@ -187,7 +187,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(112, 105);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(283, 31);
@@ -196,12 +196,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(180, 447);
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(183, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 57);
+            this.button1.Size = new System.Drawing.Size(137, 44);
             this.button1.TabIndex = 21;
             this.button1.Text = "NEXT";
             this.button1.UseVisualStyleBackColor = false;
@@ -223,7 +223,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(273, 375);
+            this.textBox5.Location = new System.Drawing.Point(79, 375);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(161, 20);
             this.textBox5.TabIndex = 23;
