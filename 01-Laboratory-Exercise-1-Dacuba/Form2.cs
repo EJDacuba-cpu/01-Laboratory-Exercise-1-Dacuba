@@ -12,15 +12,15 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 {
     public partial class Form2 : Form
     {
-        private readonly DelString DelFirstName;
-        private readonly DelString DelMiddleName;
-        private readonly DelString DelLastName;
-        private readonly DelString DelProgram;
-        private readonly DelString DelAddress;
+        private DelString DelFirstName;
+        private DelString DelMiddleName;
+        private DelString DelLastName;
+        private DelString DelProgram;
+        private DelString DelAddress;
 
-        private readonly DelLong DelAge;
-        private readonly DelLong DelContactnum;
-        private readonly DelLong DelStudentnum;
+        private DelLong DelAge;
+        private DelLong DelContactnum;
+        private DelLong DelStudentnum;
         public Form2()
         {
             InitializeComponent();
