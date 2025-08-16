@@ -33,33 +33,14 @@ namespace _01_Laboratory_Exercise_1_Dacuba
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
-            {
-                MessageBox.Show("lagay mo naman First name mo nak nang teteng ohh!!");
-                textBox1.Focus();
+            if 
+            (string.IsNullOrWhiteSpace(textBox1.Text)
+            || string.IsNullOrWhiteSpace(textBox2.Text))
+   
+                {
+                MessageBox.Show("Please Complete all fields Before Submitting", "yan tayo eh" ,MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(textBox3.Text))
-            {
-                MessageBox.Show("lagay mo naman Middle name mo nak nang teteng ohh!!");
-                textBox1.Focus();
-                return;
-            }
-            if (string.IsNullOrEmpty(textBox4.Text))
-            {
-                MessageBox.Show("lagay mo naman last name mo nak nang teteng ohh!!");
-                textBox1.Focus();
-                return;
-
-            }
-
-            if (string.IsNullOrEmpty(textBox6.Text))
-            {
-                MessageBox.Show("lagay mo naman address name mo nak nang teteng ohh!!");
-                textBox1.Focus();
-                return;
-            }
-
 
             // para dun sa mga numeric 
             if (!long.TryParse(textBox2.Text, out var StuNum))

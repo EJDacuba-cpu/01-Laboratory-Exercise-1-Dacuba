@@ -67,5 +67,15 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
