@@ -150,5 +150,10 @@ namespace _01_Laboratory_Exercise_1_Dacuba
         {
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
